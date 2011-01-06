@@ -1,0 +1,68 @@
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>true</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <outputDirectory>/</outputDirectory>
+      <directory>dev/target</directory>
+      <includes>
+        <include>user-manual.pdf</include>
+        <include>release-notes.pdf</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>/</outputDirectory>
+      <directory>acme-coyote-web/target</directory>
+      <includes>
+        <include>acme-coyote-web.war</include>
+        <include>acme-coyote.ddl</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>/</outputDirectory>
+      <directory>acme-coyote-web/src/main/sql</directory>
+      <includes>
+        <include>db-setup.sql</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>/</outputDirectory>
+      <directory>acme-coyote-web/src/test/resources</directory>
+      <includes>
+        <include>acme-coyote.properties</include>
+        <include>log4j.properties</include>
+      </includes>
+    </fileSet>
+    <!-- The pdf files. -->
+    <fileSet>
+      <outputDirectory>/</outputDirectory>
+      <directory>dev/target/site/pdf</directory>
+      <includes>
+        <include>user-manual.pdf</include>
+        <include>release-notes.pdf</include>
+      </includes>
+    </fileSet>
+    <!-- The main site. -->
+    <fileSet>
+      <outputDirectory>/doc</outputDirectory>
+      <directory>dev/target/site</directory>
+      <includes/>
+    </fileSet>
+    <!-- We copy each module. -->
+    <fileSet>
+      <outputDirectory>/doc/acme-coyote-style</outputDirectory>
+      <directory>acme-coyote-style/target/site</directory>
+      <includes/>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>/doc/acme-coyote-web</outputDirectory>
+      <directory>acme-coyote-web/target/site</directory>
+      <includes/>
+    </fileSet>
+  </fileSets>
+</assembly>
+<!-- vim: set ts=2 sw=2 et: -->
+

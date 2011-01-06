@@ -1,0 +1,45 @@
+<settings>
+  <!-- Sample mirror entry, with sonar support. Don't put a space between * and
+       !sonar or some versions of maven won't work correctly. -->
+  <!--
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <url>http://maven.corp.globant.com/nexus/content/groups/public</url>
+      <mirrorOf>*,!sonar</mirrorOf>
+    </mirror>
+  </mirrors>
+  -->
+  <profiles>
+    <profile>
+      <id>acme_coyote</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <acme_coyote.datasource.url>
+         jdbc:mysql://localhost/acme_coyote
+        </acme_coyote.datasource.url>
+        <acme_coyote.datasource.username>
+          acme_coyote
+        </acme_coyote.datasource.username>
+        <acme_coyote.datasource.password>
+          acme_coyote
+        </acme_coyote.datasource.password>
+        <!-- Starts cargo with jpda enabled for remote debugging in port 8000.
+             -->
+        <acme_coyote.cargo.jvmargs>
+          -Xdebug -Xnoagent -Djava.compiler=NONE
+          -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n
+        </acme_coyote.cargo.jvmargs>
+        <!-- You can add log4j configuration options here. -->
+        <acme_coyote.log4j>
+          log4j.logger.com.globant.katari.sample=TRACE
+          log4j.logger.com.globant.katari.editablepages=TRACE
+        </acme_coyote.log4j>
+      </properties>
+    </profile>
+  </profiles>
+  <!-- vim: set ts=2 et sw=2 ai: -->
+</settings>
+

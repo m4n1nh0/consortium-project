@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Acme tools for the coyote">
+
+  <skin>
+    <groupId>com.globant.katari</groupId>
+    <artifactId>katari-siteskin</artifactId>
+    <version>0.28</version>
+  </skin>
+
+  <bannerLeft>
+    <name>Katari</name>
+    <src>images/mainLogo.png</src>
+  </bannerLeft>
+
+  <body>
+
+    <links>
+      <item name="Nexus" href="https://projects.globant.com/nexus/" />
+    </links>
+
+    <menu name="Acme tools for the coyote">
+      <item name="Introduction" href="index.html" />
+      <item name="Release Notes" href="release-notes.html"/>
+    </menu>
+
+    <menu name="Design">
+      <item name="General design" href="general-design.html" />
+      <item name="User crud design" href="user-crud-design.html" />
+    </menu>
+
+    <menu name="For Developers">
+      <item name="Review Checklist" href="review-checklist.html" />
+    </menu>
+
+    <menu name="Modules">
+      <item name="Acme tools for the coyote - web"
+        href="/acme-coyote-web/index.html"/>
+      <item name="Acme tools for the coyote - style"
+        href="/acme-coyote-style/index.html"/>
+    </menu>
+
+    ${reports}
+
+  </body>
+</project>
+<!-- vim: set ts=2 sw=2 et: -->
+
